@@ -30,20 +30,15 @@
 
   typeカラム
   銘柄の種類
-  ・スティルワイン
-    ・赤
-    ・白
-    ・ロゼ
-  ・スパークリングワイン
-  ・フォーティファイドワイン
-  ・フレーバードワイン
+  ->typesテーブル
 
   varietyカラム
   銘柄の品種を選択する
-  ユーザーが入力・登録することもできる
+  ->varietiesテーブル
 
   sceneカラム
   銘柄におすすめのシーンを選択
+  active_hashを使用
 
   yearカラム
   収穫年を入力
@@ -51,6 +46,7 @@
 
   tasteカラム
   銘柄の味を選択
+  active_hashを使用
 
   likes_countカラム
   いいねの数を管理
@@ -81,10 +77,9 @@
 - has_many :images,   dependent: :destroy
 - has_many :comments, dependent: :destroy
 - has_many :likes,    dependent: :destroy
-- belongs_to :user
 
 <!--
-  商品の画像。１枚必須。
+  銘柄の画像。１枚必須。
 -->
 
 ## imagesテーブル
@@ -121,7 +116,22 @@
   存在しない品種でも入力・登録はできる。
 -->
 
-## varietyテーブル
+## varietiesテーブル
+| Column   | Type   | Option                                                        |
+|----------|--------|---------------------------------------------------------------|
+|name      |string  |null: false, index: true, unique: true, length: { maximum: 40 }|
+|created_at|datetime|null: false                                                    |
+|updated_at|datetime|null: false                                                    |
+
+### Association
+- has_many :brands
+
+<!--
+  産地は任意でユーザに入力させる。
+  存在しない産地でも入力・登録はできる。
+-->
+
+## originsテーブル
 | Column   | Type   | Option                                                        |
 |----------|--------|---------------------------------------------------------------|
 |name      |string  |null: false, index: true, unique: true, length: { maximum: 40 }|
