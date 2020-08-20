@@ -12,9 +12,22 @@
           .header__contents__right__upper__search
             = form_with url: "#", local: true, method: :get do |form|
               = form.text_field :keyword, placeholder: "キーワードで検索", class: "search-input"
-          .header__contents__right__upper__btn
-            = form.submit "検索", class: "search-btn"
-            .header__contents__right__upper__btn__icon
+              .header__contents__right__upper__submit-btn
+                %label
+                  = form.submit "検索", class: "search-btn"
+                  .header__contents__right__upper__submit-btn__icon
+        .header__contents__right__lower
+          %ul.header__contents__right__lower__lists
+            %li
+              種類
+            %li
+              品種
+            %li
+              産地
+            %li
+              詳細検索
+          .header__contents__right__lower__btn
+            ログイン
   .content
     .side__bar
     .content__main
