@@ -63,15 +63,15 @@
 | Column          | Type     | Option                                                                            |
 |-----------------|----------|-----------------------------------------------------------------------------------|
 |name             |string    |null: false, index: true, length: { maximum: 40 }                                  |
-|origin           |string    |null: false                                                                        |
-|explain          |text      |null: false,              length: { maximum: 1_000 }                               |
-|type             |integer   |null: false                                                                        |
-|variety          |integer   |null: false                                                                        |
-|scene            |integer   |null: false                                                                        |
-|year             |string    |null: false                                                                        |
-|taste            |integer   |null: false                                                                        |
-|likes_count      |integer   |                                                                                   |
+|origin           |string    |                                                                                   |
+|explain          |text      |                          length: { maximum: 1_000 }                               |
+|year             |string    |                                                                                   |
 |value            |string    |                                                                                   |
+|scene            |integer   |                                                                                   |
+|taste            |integer   |                                                                                   |
+|likes_count      |integer   |                                                                                   |
+|type             |references|             foreign_key: true                                                     |
+|variety          |references|             foreign_key: true                                                     |
 |user             |references|null: false, foreign_key: true                                                     |
 |created_at       |datetime  |null: false                                                                        |
 |updated_at       |datetime  |null: false                                                                        |
