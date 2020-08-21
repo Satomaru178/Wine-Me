@@ -1,33 +1,45 @@
 .wrapper
-  .header
-    .header__contents
-      .header__contents__left
-        .headef__contents__left__logo
-          %span
-          WINE-ME
-      .header__contents__right
-        .header__contents__right__upper
-          %h2.header__contents__right__upper__copy
-            あなたのお気に入りのワイン、教えてください
-          .header__contents__right__upper__search
-            = form_with url: "#", local: true, method: :get do |form|
-              = form.text_field :keyword, placeholder: "キーワードで検索", class: "search-input"
-              .header__contents__right__upper__submit-btn
-                %label
-                  = form.submit "検索", class: "search-btn"
-                  .header__contents__right__upper__submit-btn__icon
-        .header__contents__right__lower
-          %ul.header__contents__right__lower__lists
-            %li
-              種類
-            %li
-              品種
-            %li
-              産地
-            %li
-              詳細検索
-          .header__contents__right__lower__btn
-            ログイン
+  .container
+    .header
+      .header__contents.flex
+        .header__contents__left
+          .headef__contents__left__logo
+            %span
+            W
+            %span
+            INE-
+            %br/
+            %span
+            M
+            %span
+            E
+        .header__contents__right
+          .header__contents__right__upper
+            %h2.header__contents__right__upper__copy
+              あなたのお気に入りのワイン、教えてください
+            .header__contents__right__upper__search
+              = form_with url: "#", local: true, method: :get do |form|
+                = form.text_field :keyword, placeholder: "キーワードで検索", class: "search-input"
+                .header__contents__right__upper__submit-btn
+                  %label
+                    = form.submit "検索", class: "search-btn"
+                    .header__contents__right__upper__submit-btn__icon
+          .header__contents__right__lower
+            %ul.header__contents__right__lower__lists
+              %li
+                種類
+              %li
+                品種
+              %li
+                産地
+              %li
+                シーン
+              %li
+                味わい
+              %li
+                詳細検索
+              %li
+                ログイン
   .content
     .side__bar
     .content__main
