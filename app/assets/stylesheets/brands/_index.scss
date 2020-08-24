@@ -25,16 +25,57 @@
       @include between();
   
       &__left {
-        width: 180px;
+        width: 130px;
         height: 100%;
 
         &__logo {
           width: 100%;
         }
+      }
 
+      &__right {
+        width: 700px;
 
+        &__upper {
+          @include between();
+          padding: 10px 0;
+
+          &__copy {
+            width: 420px;
+            padding-top: 15px;
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 20px;
+          }
+
+          &__search {
+            width: 220px;
+            position: relative;
+
+            &__assistive-text {
+              display: none;
+            }
+
+            .search-form {
+              max-width: 220px;
+            }
+
+            .search-input {
+              width: 100%;
+              font-size: 12px;
+            }
+
+            .input {
+              padding: 12px;
+              box-shadow: none;
+              border: solid 1px #E09F3E;
+              border-radius: 5px;
+            }
+          }
+        }
       }
     }
   }
 }
-
