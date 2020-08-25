@@ -11,27 +11,32 @@
             あなたのお気に入りのワイン、教えてください
           .header__contents__right__upper__search
             = form_with url: "#", local: true, method: :get, class: "search-form" do |f|
-              = f.text_field :keyword, placeholder: "キーワードで検索", class: "search-input input"
-              .header__contents__right__upper__submit-btn
-                = f.label :search, class: "submit-btn-icon" do
-                  = f.submit class: "search-btn input" do
-                    = icon('fas', 'search')
+              = f.text_field :keyword, placeholder: "キーワードで検索", class: "search-input"
+              = button_tag type: "submit", class: "search-btn" do
+                = icon('fas', 'search')
         .header__contents__right__lower
           %ul.header__contents__right__lower__lists
-            %li
-              種類
-            %li
-              品種
-            %li
-              産地
-            %li
-              シーン
-            %li
-              味わい
-            %li
-              詳細検索
-            %li
-              ログイン
+            %li.header__contents__right__lower__lists__type
+              = link_to "#" do
+                種類
+            %li.header__contents__right__lower__lists__variety
+              = link_to "#" do
+                品種
+            %li.header__contents__right__lower__lists__origin
+              = link_to "#" do
+                産地
+            %li.header__contents__right__lower__lists__scene
+              = link_to "#" do
+                シーン
+            %li.header__contents__right__lower__lists__taste
+              = link_to "#" do
+                味わい
+            %li.header__contents__right__lower__lists__detail-search
+              = link_to "#" do
+                詳細検索
+            %li.header__contents__right__lower__lists__login
+              = link_to "#" do
+                ログイン
 .content
   .side__bar
   .content__main
