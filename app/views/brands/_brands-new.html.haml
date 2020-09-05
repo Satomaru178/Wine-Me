@@ -1,0 +1,14 @@
+.brands__new
+  .brands__new__box
+    %h3.brands__new__box__title
+      新着のワイン
+    %ul.brands__new__box__lists
+      %li.brands__new__box__list
+        = link_to "#" do
+          = image_tag "sample/sample2.jpg", alt: "Fontanafredda Barolo", class: "brands__new__box__list__image", size: '220x220'
+          .brands__new__box__list__info
+            %p.brands__new__box__list__info__name
+              Fontanafredda Barolo
+            .branlds__new__box__list__info__score
+              = icon('fas', 'star')
+              = 0
