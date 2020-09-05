@@ -1,0 +1,14 @@
+.brands__popular
+  .brands__popular__box
+    %h3.brands__popular__box__title
+      人気のワイン
+    %ul.brands__popular__box__lists
+      %li.brands__popular__box__list
+        = link_to "#" do
+          = image_tag "sample/sample1.jpg", alt: "Dom. Leroy Romanée St. Vivant Grand Cru", class: "brands__popular__box__list__image", size: '220x220'
+          .brands__popular__box__list__info
+            %p.brands__popular__box__list__info__name
+              Dom. Leroy Romanée St. Vivant Grand Cru
+            .brands__popular__box__list__info__score
+              = icon('fas', 'star')
+              = 0

@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  height: 130px;
   position: relative;
   z-index: 2;
   box-sizing: border-box;
@@ -78,7 +78,6 @@
               .search-input {
                 width: 100%;
                 font-size: 12px;
-                
               }
   
               .search-btn {
@@ -94,7 +93,6 @@
                 outline : none;
               }
             }
-
           }
         }
 
@@ -103,6 +101,8 @@
           padding: 10px 0;
 
           &__lists {
+            display: flex;
+            justify-content: space-around;  
             li {
               display: inline-block;
               font-family: 1.4rem;
@@ -112,7 +112,6 @@
             }  
           }
         }
-
       }
     }
   }

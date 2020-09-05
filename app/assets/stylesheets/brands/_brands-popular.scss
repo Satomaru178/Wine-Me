@@ -1,0 +1,23 @@
+.brands__popular {
+  padding: 10px;
+  background: #FFF3B0;
+
+  &__box {
+    padding: 40px 5% 0 5%;
+    position: relative;
+    max-width: 100%;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    &__list {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+  }
+}
